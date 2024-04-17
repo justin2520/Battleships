@@ -3,10 +3,10 @@ import java.awt.*;
 import java.util.*;
 
 public class Tile {
-    private JLabel icon;
+    private JLabel ship;
 
     public Tile(){
-        ImageIcon image = new ImageIcon("Battleships/tiles/");
+
     }
 
     public void updateTile(int ){
