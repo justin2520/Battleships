@@ -1,4 +1,8 @@
-public class Board {
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
+
+public class Board extends JPanel{
 private Tile[][] tiles;
 
     public Board(){

@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.*;
 
 public class Tile {
-    private JLabel ship;
+    private JButton button;
 
     public Tile(){
 
