@@ -9,10 +9,7 @@ public class Main {
         JPanel playerOneBoard = new Board();
         JPanel playerTwoBoard = new Board();
 
-
-//        ImageIcon slot00Image = new ImageIcon();
-
-
+        mainFrame.add(playerOneBoard);
         mainFrame.setVisible(true);
     }
 }
