@@ -9,6 +9,7 @@ public class Main {
         JPanel playerOneBoard = new Board();
         JPanel playerTwoBoard = new Board();
 
+
         mainFrame.add(playerOneBoard);
         mainFrame.setVisible(true);
     }
