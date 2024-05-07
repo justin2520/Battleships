@@ -12,6 +12,9 @@ public class Tile extends JButton{
             @Override
             public void actionPerformed(ActionEvent e){
                 int place = JOptionPane.showConfirmDialog(null, "Would you like to place a ship here?");
+                if(place == JOptionPane.YES_OPTION){
+
+                }
             }
         });
     }
