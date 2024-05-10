@@ -1,3 +1,7 @@
 public class Battleship {
-public int size;
+    private int size;
+
+    public Battleship(int size){
+        this.size = size;
+    }
 }
