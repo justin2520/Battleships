@@ -13,7 +13,6 @@ public class Board extends JPanel{
         super(new GridLayout(10,10));
         this.player = player;
         super.setBackground(new Color(25,55,255));
-        super.setSize(500,500);
         tiles = new Tile[10][10];
 
         for(int i = 0; i < 10; i++){
@@ -30,7 +29,7 @@ public class Board extends JPanel{
                     public void actionPerformed(ActionEvent e){
                         int place = JOptionPane.showConfirmDialog(null, "Would you like to place a ship here?");
                         if(place == JOptionPane.YES_OPTION){
-//                            int size = JOptionPane.showInputDialog(null, "What size ");
+                            int size = JOptionPane.showInputDialog(null, "What size would you like the ship to be?");
                         }
                     }
                 });

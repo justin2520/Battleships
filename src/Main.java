@@ -12,6 +12,7 @@ public class Main {
 
 
         mainFrame.add(playerOneBoard);
+        mainFrame.setSize(500,500);
         mainFrame.setVisible(true);
     }
 }
