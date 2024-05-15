@@ -6,8 +6,11 @@ import java.util.*;
 
 public class Board extends JPanel{
     private Tile[][] tiles;
-    private Battleship[] battleships;
+    private Ship[] ships;
     private int player;
+    public static int patrolBoats = 4;
+    public static int submarinesDestroyers = 3;
+    public static int battleships = 2;
 
     public Board(int player){
         super(new GridLayout(10,10));
@@ -29,7 +32,12 @@ public class Board extends JPanel{
                     public void actionPerformed(ActionEvent e){
                         int place = JOptionPane.showConfirmDialog(null, "Would you like to place a ship here?");
                         if(place == JOptionPane.YES_OPTION){
-                            int size = JOptionPane.showInputDialog(null, "What size would you like the ship to be?");
+                            int size = Integer.parseInt(JOptionPane.showInputDialog(null, "What size would you like the ship to be?"));
+
+                            switch(size){
+                                case 2:
+
+                            }
                         }
                     }
                 });
