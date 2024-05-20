@@ -7,11 +7,12 @@ public class Tile extends JButton{
     private boolean battleship;
 
     public Tile(){
-        super.setBackground(new Color(25,55,200));
+        
     }
 
-    public void updateTile(boolean battleship){
+    public void updateTile(boolean battleship, Color color){
         this.battleship = battleship;
+        super.setBackground(color);
     }
 
     public boolean isBattleship(){
