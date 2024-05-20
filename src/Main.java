@@ -8,8 +8,8 @@ public class Main {
         JFrame playerTwoFrame = new JFrame();
         boolean turn = true;
 
-        JPanel playerOneBoard = new Board(1);
-        JPanel playerTwoBoard = new Board(2);
+        Board playerOneBoard = new Board(1);
+        Board playerTwoBoard = new Board(2);
 
         playerOneFrame.add(playerOneBoard);
         playerOneFrame.setSize(500,500);
@@ -17,5 +17,14 @@ public class Main {
 
         playerTwoFrame.add(playerTwoBoard);
         playerTwoFrame.setSize(500,500);
+
+        while(turn){
+            if(playerOneBoard.getShips().size() == 10){
+                turn = false;
+            }
+        }
+
+        playerOneFrame.setVisible(false);
+        playerTwoFrame.setVisible(true);
     }
 }

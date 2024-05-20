@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Board extends JPanel{
     private Tile[][] tiles;
-    private ArrayList<Ship> ships;
+    private ArrayList<Ship> ships = new ArrayList<Ship>();
     private int player;
     private int patrolBoats = 4;
     private int submarinesDestroyers = 3;
@@ -106,13 +106,13 @@ public class Board extends JPanel{
                 }
                 else{
                     for(int sC = c; sC > c - size && isPossible; sC--){
-                        if(isInhabited(sC, c)){
+                        if(isInhabited(r, sC)){
                             isPossible = false;
                         }
                     }
 
                     if(isPossible){
-                        // ships.add(new Ship(size));
+                        ships.add(new Ship(size));
                         for(int sC = c; sC > c - size; sC--){
                           tiles[r][sC].updateTile(true, Color.RED);  
                         }
@@ -131,13 +131,13 @@ public class Board extends JPanel{
                 }
                 else{
                     for(int sC = c; sC < c + size && isPossible; sC++){
-                        if(isInhabited(sC, c)){
+                        if(isInhabited(r, sC)){
                             isPossible = false;
                         }
                     }
                     
                     if(isPossible){
-                        // ships.add(new Ship(size));
+                        ships.add(new Ship(size));
                         for(int sC = c; sC < c + size; sC++){
                           tiles[r][sC].updateTile(true, Color.RED);  
                         }
@@ -162,7 +162,7 @@ public class Board extends JPanel{
                     }
 
                     if(isPossible){
-                        // ships.add(new Ship(size));
+                        ships.add(new Ship(size));
                         for(int sR = r; sR > r - size; sR--){
                           tiles[sR][c].updateTile(true, Color.RED);  
                         }
@@ -176,7 +176,7 @@ public class Board extends JPanel{
                 break;
 
             case "D":
-                if((c + size) > 10){
+                if((r + size) > 10){
                     doesNotFitError();
                 }
                 else{
@@ -187,7 +187,7 @@ public class Board extends JPanel{
                     }
 
                     if(isPossible){
-                        // ships.add(new Ship(size));
+                        ships.add(new Ship(size));
                         for(int sR = r; sR < r + size; sR++){
                           tiles[sR][c].updateTile(true, Color.RED);  
                         }
@@ -238,5 +238,9 @@ public class Board extends JPanel{
         else{
             carriers--;
         }
+    }
+
+    public ArrayList<Ship> getShips(){
+        return ships;
     }
 }
